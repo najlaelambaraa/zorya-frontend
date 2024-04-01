@@ -68,11 +68,11 @@ export default async function RelatedProducts({
           Related products
         </span>
         <p className="text-2xl-regular text-ui-fg-base max-w-lg">
-          You might also want to check out these products.
+          VOUS AIMEREZ AUSSI
         </p>
       </div>
 
-      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
+      <ul className="grid grid-cols-1 small:grid-cols-2 medium:grid-cols-4 gap-x-4 gap-y-8">
         {productPreviews.map((productPreview) => (
           <li key={productPreview.id}>
             <ProductPreview region={region} productPreview={productPreview} />

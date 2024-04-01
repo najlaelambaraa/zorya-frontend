@@ -151,7 +151,7 @@ const Shipping: React.FC<ShippingProps> = ({
             isLoading={isLoading}
             disabled={!cart.shipping_methods[0]}
           >
-            Continue to payment
+            Continuer vers le paiement
           </Button>
         </div>
       ) : (

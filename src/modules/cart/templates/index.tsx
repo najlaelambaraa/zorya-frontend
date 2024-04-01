@@ -32,6 +32,7 @@ const CartTemplate = ({
                 {cart && cart.region && (
                   <>
                     <div className="bg-white py-6">
+                      
                       <Summary cart={cart} />
                     </div>
                   </>
