@@ -6,6 +6,14 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { getRegion } from "app/actions"
 import { ProductCollectionWithPreviews } from "types/global"
+import StoryComponent from "@modules/home/components/Story"
+import ValeurTemplate from "@modules/layout/templates/valeurs"
+import TitleComponent from "@modules/home/components/titleComponent"
+import BrandSection from "@modules/brand/components"
+import brandTemplate from "@modules/brand/templates"
+import BrandTemplate from "@modules/brand/templates"
+import Cards from "@modules/blog/templates/Cards"
+import Carousel from "@modules/home/components/carousel"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -68,11 +76,25 @@ export default async function Home({
 
   return (
     <>
-      <Hero />
-      <div className="py-12">
+      {/* <Hero /> */}
+      <Carousel/>
+      <div className="py-12 bg-secondary">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
+        <ValeurTemplate/>
+        <StoryComponent
+          title={<TitleComponent title="NOTRE HISTOIRE" />}
+          altText="Notre histoire"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus."
+          buttonText="En savoir plus"
+          buttonLink="/histoire"
+          imageSrc="/public/" 
+          reverse={false} 
+      />
+     
       </div>
     </>
   )

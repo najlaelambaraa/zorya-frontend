@@ -36,40 +36,39 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="flex items-center justify-center p-12 bg-lime-500">
-      <form onSubmit={subscribe} className="w-full max-w-lg">
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3">
-            <label
-              className="block tracking-wide text-black text-xs mb-2"
-              htmlFor="email"
-            >
-              Abonnez-vous à notre newsletter et soyez les premiers informés des nouveautés !
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="appearance-none block w-full bg-black text-black border border-black bg-lime-500 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-black"
-              placeholder="Adresse e-mail"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-            <button
-              type="submit"
-              className="mt-4 bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 w-full"
-            >
-              S'inscrire
-            </button>
-          </div>
-          <div className="flex mt-4">
-       
-        <a href="#" className="text-white mx-2"><Facebook/></a>
-        <a href="#" className="text-white mx-2"><Twitter/></a>
-        <a href="#" className="text-white mx-2"><TypescriptEx/></a>
+    <div className="flex items-center justify-center p-10 bg-primary">
+  <form onSubmit={subscribe} className="w-full max-w-lg">
+    <div className="flex flex-col items-center">
+      <label
+        className="block tracking-wide text-black text-base mb-4 text-center"
+        htmlFor="email"
+      >
+        Abonnez-vous à notre newsletter et soyez les premiers informés des nouveautés !
+      </label>
+      <div className="flex w-full mb-4">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          className="appearance-none block bg-black text-black border border-black bg-primary py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-black w-full md:w-auto flex-1"
+          placeholder="Adresse e-mail"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+        <button
+          type="submit"
+          className="bg-black hover:bg-gray-700 text-white font-bold py-4 px-10 ml-4"
+        >
+          S'inscrire
+        </button>
       </div>
-      </div>
-      </form>
     </div>
+    <div className="flex justify-center mt-4">
+      <a href="#" className="text-white mx-2"><Facebook/></a>
+      <a href="#" className="text-white mx-2"><Twitter/></a>
+      <a href="#" className="text-white mx-2"><TypescriptEx/></a>
+    </div>
+  </form>
+</div>
   );
 }

@@ -92,7 +92,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         {appliedDiscount ? (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="txt-medium">Discount applied:</Heading>
+              <Heading className="txt-medium">Code promo appliquer</Heading>
               <div className="flex items-center justify-between w-full max-w-full">
                 <Text className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
                   <span>Code:</span>
@@ -105,7 +105,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 >
                   <Trash size={14} />
                   <span className="sr-only">
-                    Remove discount code from order
+                    Supprimer le code promo de la commande
                   </span>
                 </button>
               </div>
@@ -119,9 +119,9 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 type="button"
                 className="txt-medium text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               >
-                Add gift card or discount code
+                Promo code
               </button>
-              <Tooltip content="You can add multiple gift cards, but only one discount code.">
+              <Tooltip content="Un seul coupon peut être utilisé par commande.">
                 <InformationCircleSolid color="var(--fg-muted)" />
               </Tooltip>
             </Label>
@@ -129,12 +129,12 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               <>
                 <div className="flex w-full gap-x-2 items-center">
                   <Input
-                    label="Please enter code"
+                    label="Entez le code promo"
                     name="code"
                     type="text"
                     autoFocus={false}
                   />
-                  <SubmitButton variant="secondary">Apply</SubmitButton>
+                  <SubmitButton variant="secondary">Valider</SubmitButton>
                 </div>
                 <ErrorMessage error={message} />
               </>

@@ -12,7 +12,7 @@ import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Thumbnail from "@modules/products/components/thumbnail"
-
+import { Sun } from "@medusajs/icons"
 const CartDropdown = ({
   cart: cartState,
 }: {
@@ -79,9 +79,9 @@ const CartDropdown = ({
       <Popover className="relative h-full">
         <Popover.Button className="h-full">
           <LocalizedClientLink
-            className="hover:text-ui-fg-base"
+            className="text-white px-4 flex items-center gap-2"
             href="/cart"
-          >{`Cart (${totalItems})`}</LocalizedClientLink>
+          ><ShoppingBag/>{`(${totalItems})`}</LocalizedClientLink>
         </Popover.Button>
         <Transition
           show={cartDropdownOpen}
@@ -130,7 +130,7 @@ const CartDropdown = ({
                                   </LocalizedClientLink>
                                 </h3>
                                 <LineItemOptions variant={item.variant} />
-                                <span>Quantity: {item.quantity}</span>
+                                <span>Quantité: {item.quantity}</span>
                               </div>
                               <div className="flex justify-end">
                                 <LineItemPrice
@@ -142,7 +142,7 @@ const CartDropdown = ({
                             </div>
                           </div>
                           <DeleteButton id={item.id} className="mt-1">
-                            Remove
+                            Supprimer
                           </DeleteButton>
                         </div>
                       </div>
@@ -151,8 +151,8 @@ const CartDropdown = ({
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
-                      Subtotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
+                      Total{" "}
+                      {/* <span className="font-normal">(excl. taxes)</span> */}
                     </span>
                     <span className="text-large-semi">
                       {formatAmount({
@@ -164,7 +164,7 @@ const CartDropdown = ({
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <Button className="w-full" size="large">
-                      Go to cart
+                      Voir le panier
                     </Button>
                   </LocalizedClientLink>
                 </div>
@@ -179,7 +179,7 @@ const CartDropdown = ({
                   <div>
                     <LocalizedClientLink href="store">
                       <>
-                        <span className="sr-only">Go to all products page</span>
+                        <span className="sr-only">Voir la page de nos produits</span>
                         <Button onClick={close}>Découvrir nos produits</Button>
                       </>
                     </LocalizedClientLink>

@@ -7,72 +7,58 @@ import MedusaCTA from "../../components/medusa-cta"
 import NewsletterForm from "../newsletters"
 
 
-const fetchCollections = async () => {
-  const { collections } = await getCollectionsList()
-  return collections
-}
+// const fetchCollections = async () => {
+//   const { collections } = await getCollectionsList()
+//   return collections
+// }
 
-const fetchCategories = async () => {
-  const { product_categories } = await getCategoriesList()
-  return product_categories
-}
+// const fetchCategories = async () => {
+//   const { product_categories } = await getCategoriesList()
+//   return product_categories
+// }
 
 export default async function Footer() {
-  const productCollections = await fetchCollections().then(
-    (collections) => collections
-  )
-  const productCategories = await fetchCategories().then(
-    (categories) => categories
-  )
+  // const productCollections = await fetchCollections().then(
+  //   (collections) => collections
+  // )
+  // const productCategories = await fetchCategories().then(
+  //   (categories) => categories
+  // )
   return (
-    <footer className="border-t border-gray-200 w-full">
-      <div className="max-w-6xl mx-auto px-4 py-10 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Catégories</h3>
-            {productCategories && productCategories.length > 0 && (
-              <ul>
-                {productCategories.slice(0, 6).map((category) => (
-                  <li key={category.id} className="mb-2">
-                    <a
-                      href={`/categories/${category.handle}`}
-                      className="text-gray-600 hover:text-gray-900"
-                    >
-                      {category.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Collections</h3>
-            {productCollections && productCollections.length > 0 && (
-              <ul>
-                {productCollections.slice(0, 6).map((collection) => (
-                  <li key={collection.id} className="mb-2">
-                    <a
-                      href={`/collections/${collection.handle}`}
-                      className="text-gray-600 hover:text-gray-900"
-                    >
-                      {collection.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Abonnez-vous à notre newsletter</h3>
-            <NewsletterForm />
-          </div>
-        </div>
-        <div className="pt-8 mt-8 border-t border-gray-200">
-          <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} Zorya Tous droits réservés.
-          </p>
-        </div>
-      </div>
-    </footer>
+    <footer className="bg-bg text-white">
+    <div className="max-w-6xl mx-auto px-2 py-5 lg:py-12 flex flex-col md:flex-row justify-between">
+    <div className="flex flex-col mb-6 md:mb-0">
+      <h2 className="text-2xl font-bold mb-1">ZORYA</h2>
+      <a href="mailto:contact@zorya.fr" className="hover:underline mb-1">contact@zorya.fr</a>
+      <a href="tel:0000000000" className="hover:underline">00 00 00 00</a>
+    </div>
+    <div className="flex flex-col md:flex-row md:items-center gap-8 justify-end">
+    <LocalizedClientLink
+      className="hover:underline"
+      href="/account"
+    >
+      MENTIONS LEGALES
+    </LocalizedClientLink>
+    <LocalizedClientLink
+      className="hover:underline"
+      href="/account"
+    >
+      POLITIQUE DE CONFIDENTIALITE
+    </LocalizedClientLink>
+    <LocalizedClientLink
+      className="hover:underline"
+      href="/account"
+    >
+      CONDITION GENERALE DE VENTE (CGV)
+    </LocalizedClientLink>
+    </div>
+   
+  </div>
+  <div className="pb-7 font-bold">
+    <p className="text-center text-white text-sm">
+      © {new Date().getFullYear()} Zorya Tous droits réservés.
+    </p>
+  </div>
+</footer>
   )
 }

@@ -2,6 +2,24 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.bg-img{
+   /* background-image: url('https://drive.google.com/file/d/1LyskS1jH9DKCaHCcx9dxrkPJXjpVfQzb/view?usp=sharing');  */
+}
+.bg-logo{
+   /* background-image: url('https://drive.google.com/file/d/1LyskS1jH9DKCaHCcx9dxrkPJXjpVfQzb/view?usp=sharing');  */
+}
+.glowing-text {
+  color: #32CD32; /* ou la couleur text-lime-600 de Tailwind si elle est différente */
+  text-shadow: 
+    0 0 5px #32CD32,
+    0 0 10px #32CD32,
+    0 0 15px #32CD32,
+   
+}
+
+
+
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

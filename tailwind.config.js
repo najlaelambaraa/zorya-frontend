@@ -13,7 +13,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/assets/images/hero-pattern.png')",
+        'hero-pattern': "url('@/public/hero-pattern.png')",
+      },
+      borderColor: {
+        'custom-border': '#8FBF37',
       },
       transitionProperty: {
         width: "width margin",
@@ -24,6 +27,10 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
+        'primary':"#8FBF37",
+        'secondary':"#070E1B",
+        'bg':"#070E1B",
+        
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",

@@ -5,18 +5,21 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Panier from "@modules/common/icons/madeFrance"
+import Logo from "@modules/common/icons/logo"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 bg-lime-700">
-      <header className="relative h-16 mx-auto">
-        <nav className="flex items-center justify-between h-full px-6">
+    <div className="sticky top-0 inset-x-0 z-50 bg-bg">
+      <header className="relative h-[59px] mx-auto">
+        <nav className="flex items-center justify-between py-3">
           { <div className="flex items-center gap-x-6">
-            <div className="h-full">
-              <SideMenu regions={regions} />
-              <img src="" alt="Logo" className="h-full w-auto text-white" />
+            <div className="h-[29px] w-[144px]">
+              {/* <SideMenu regions={regions} /> */}
+             <img src="/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1714507426551-logo%20picto%20(1).png&w=3840&q=50" alt="Logo" />
+          
             </div>    
           </div> 
           }
@@ -29,14 +32,14 @@ export default async function Nav() {
               PRODUITS
             </LocalizedClientLink>
             <LocalizedClientLink
-              href="/"
+              href="/brand"
               className="hover:underline"
             >
               NOTRE MARQUE
             </LocalizedClientLink>
             <LocalizedClientLink
                 className="hover:underline"
-                href="/store" 
+                href="/blog" 
               >
                 BLOG
             </LocalizedClientLink>
@@ -58,15 +61,16 @@ export default async function Nav() {
                 href="/account"
               >
                 Account
+                
               </LocalizedClientLink>
             </div>
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="text-white hover:text-ui-fg-base flex gap-2"
+                  className="text-white bg-lime-700 hover:text-ui-fg-base flex gap-2"
                   href="/cart"
                 >
-                  augs(0)
+                  Panier(0)
                   
                 </LocalizedClientLink>
               }

@@ -12,6 +12,7 @@ import {
 import { Region } from "@medusajs/medusa"
 import ProductTemplate from "@modules/products/templates"
 import { getRegion } from "app/actions"
+import ProductLayout from "@modules/home/components/product/Product-Layout"
 
 type Props = {
   params: { countryCode: string; handle: string }
@@ -58,10 +59,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${product.title} | Medusa Store`,
+    title: `${product.title} | Zorya Store`,
     description: `${product.title}`,
     openGraph: {
-      title: `${product.title} | Medusa Store`,
+      title: `${product.title} | Zorya Store`,
       description: `${product.title}`,
       images: product.thumbnail ? [product.thumbnail] : [],
     },
@@ -99,10 +100,11 @@ export default async function ProductPage({ params }: Props) {
   }
 
   return (
-    <ProductTemplate
+    <><ProductTemplate
       product={pricedProduct}
       region={region}
-      countryCode={params.countryCode}
-    />
+      countryCode={params.countryCode}/>
+     
+    </>
   )
 }

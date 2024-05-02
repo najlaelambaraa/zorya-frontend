@@ -15,12 +15,14 @@ type ProductTemplateProps = {
   product: PricedProduct
   region: Region
   countryCode: string
+  
 }
 
 const ProductTemplate: React.FC<ProductTemplateProps> = ({
   product,
   region,
   countryCode,
+ 
 }) => {
   if (!product || !product.id) {
     return notFound()
@@ -50,6 +52,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
           <RelatedProducts product={product} countryCode={countryCode} />
         </Suspense>
       </div>
+     
     </>
   )
 }
