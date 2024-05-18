@@ -23,8 +23,8 @@ export default function StoryComponent({
 }) {
   return (
     <LocalizedClientLink href={buttonLink} className="group">
-    <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center justify-center bg-secondary text-white`}>
-      <CustomImage src={imageSrc} alt={altText}  />
+    <div className={`flex flex-col ${reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'} items-center justify-center bg-secondary text-white pt-10`}>
+      <CustomImage src={imageSrc} alt={altText} className="w-full sm:w-auto" />
       <div className="flex flex-col py-4 px-4 w-full sm:w-[660px] h-auto sm:h-[520px] justify-between"> 
         <div>
           <span className="px-4">{title}</span>
@@ -35,7 +35,8 @@ export default function StoryComponent({
         </div> 
       </div>
     </div>
-  </LocalizedClientLink>  
+  </LocalizedClientLink>
+  
   
   );
 }

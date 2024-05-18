@@ -25,12 +25,14 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   return (
     <Container
       className={clx(
-        "relative overflow-hidden bg-ui-bg-subtle shadow-elevation-card-rest  group-hover:shadow-elevation-card-hover transition-shadow ease-in-out duration-150 w-[660px] h-[520px]",
+        "relative overflow-hidden bg-ui-bg-subtle shadow-elevation-card-rest  group-hover:shadow-elevation-card-hover transition-shadow ease-in-out duration-150 sm:w-[660px] sm:h-[520px]",
         className,
         {
-          "h-64 w-64": size === "medium", // Example fixed size for 'medium'
-          // Add additional fixed sizes for other sizes if necessary
-          "w-full h-auto": size === "full", // 'full' can be responsive if that's intended
+          "h-[200px] w-[200px] sm:h-[240px] sm:w-[240px] md:h-[300px] md:w-[300px]": size === "medium",
+          "h-[400px] w-full md:h-[520px]": size === "large",
+          "w-full h-auto": size === "full",
+          "h-[700px] w-[720px]": size === "small",
+
         }
       )}
     >
@@ -50,7 +52,7 @@ const ImageOrPlaceholder = ({
       className="absolute inset-0 object-cover object-center"
       draggable={false}
       quality={50}
-      sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
+      sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 600px"
       fill
     />
   ) : (

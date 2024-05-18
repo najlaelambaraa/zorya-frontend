@@ -18,14 +18,15 @@ const ValeurTemplate = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center bg-bg h-[369px]">
-    <TitleComponent title='NOS VALEURS'/>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center gap-3.5 w-[936px] h-[235px]">
+    <div className="flex flex-col justify-center items-center bg-bg min-h-screen"> 
+    <TitleComponent title="NOS VALEURS" />
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:w-full max-w-6xl px-4 pb-20 text-white">
       {valeurs.map((valeur, index) => (
         <Valeur key={index} Icone={valeur.Icone} titre={valeur.titre} texte={valeur.texte} />
       ))}
     </div>
   </div>
+
   
   );
 };

@@ -1,6 +1,10 @@
 "use client";
+import Facebook from '@modules/common/icons/facebook';
+import Linkedin from '@modules/common/icons/linkedin';
+import Tiktok from '@modules/common/icons/tiktok';
+import Twitter from '@modules/common/icons/twitter';
 import { useState } from 'react';
-import { Facebook,Twitter,TypescriptEx } from "@medusajs/icons"
+
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
 
@@ -39,12 +43,12 @@ export default function NewsletterForm() {
     <div className="flex items-center justify-center p-10 bg-primary">
   <form onSubmit={subscribe} className="w-full max-w-lg">
     <div className="flex flex-col items-center">
+      <h1 className="text-2xl font-bold mb-4">Rejoignez la Glowsphère ! </h1>
       <label
         className="block tracking-wide text-black text-base mb-4 text-center"
         htmlFor="email"
       >
-        Abonnez-vous à notre newsletter et soyez les premiers informés des nouveautés !
-      </label>
+        Abonnez-vous pour recevoir des nouveautés et astuces glowing chaque mois !      </label>
       <div className="flex w-full mb-4">
         <input
           type="email"
@@ -64,9 +68,11 @@ export default function NewsletterForm() {
       </div>
     </div>
     <div className="flex justify-center mt-4">
-      <a href="#" className="text-white mx-2"><Facebook/></a>
-      <a href="#" className="text-white mx-2"><Twitter/></a>
-      <a href="#" className="text-white mx-2"><TypescriptEx/></a>
+      <a href="#"><Facebook/></a>
+      <a href="#"><Twitter/></a>
+      <a href="#"><Tiktok/></a>
+      <a href="#"><Linkedin/></a>
+      {/* <a href="#"><Instagram/></a> */}
     </div>
   </form>
 </div>

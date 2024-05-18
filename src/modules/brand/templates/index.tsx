@@ -5,25 +5,25 @@ const BrandTemplate: React.FC = () => {
       {
         imageUrl: "/path/to/image1.jpg",
         fullName: "HUGO MONNIER",
-        profession: "Commercial"
+        profession: "Chill du groupe"
       },
       {
         imageUrl: "/path/to/image2.jpg",
         fullName: "GREGOIRE DELARUE",
-        profession: "Fondateur"
+        profession: "L'overthinker"
       },
       {
         imageUrl: "/path/to/image3.jpg",
         fullName: "NINO PARMENT",
-        profession: "Colaborateur"
+        profession: "Le rationnel"
       }
     ];
   
     return (
-      <div className="bg-bg">
+      
         
         <ProfileDisplay profiles={people} />
-      </div>
+     
     );
   };
   export default BrandTemplate;

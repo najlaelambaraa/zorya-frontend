@@ -5,6 +5,8 @@ import Input from "@modules/common/components/input"
 import { logCustomerIn } from "@modules/account/actions"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
+import Logo from "@modules/common/icons/logo"
+import Picto from "@modules/common/icons/picto"
 
 type Props = {
   setCurrentView: (view: LOGIN_VIEW) => void
@@ -15,9 +17,9 @@ const Login = ({ setCurrentView }: Props) => {
 
   return (
     <div className="max-w-sm w-full flex flex-col items-center">
-      <h1 className="text-large-semi uppercase mb-6">Bienvenue</h1>
-      <p className="text-center text-base-regular text-ui-fg-base mb-8">
-        S'identifier pour commencer vos achats
+      <Picto/>
+      <p className="text-center text-3xl text-ui-fg-base mb-8">
+        Connexion
       </p>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
@@ -38,7 +40,7 @@ const Login = ({ setCurrentView }: Props) => {
           />
         </div>
         <ErrorMessage error={message} />
-        <SubmitButton className="w-full mt-6">S'identifier</SubmitButton>
+        <SubmitButton className="w-full mt-6 hover:bg-primary hover:text-black">S'identifier</SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
         Pas un member?{" "}

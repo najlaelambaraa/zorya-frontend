@@ -6,7 +6,7 @@ interface CustomImageProps {
 
 const CustomImage: React.FC<CustomImageProps> = ({ src, alt }) => {
   return (
-    <div className="w-[660px] h-[520px] bg-white">
+    <div className="sm:w-[565px] w-[300px] h-[425px] bg-white">
       <img
         src={src}
         alt={alt}

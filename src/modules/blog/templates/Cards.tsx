@@ -34,18 +34,20 @@ const Cards = () => {
         link: "#",
         alt: "image"
       },
-    // ... ajoutez plus d'articles ici
+    
   ];
 
   return (
     <div className="container mx-auto p-4">
         <TitleComponent title="Le Blog" />
-        <div>
+        <div className='flex items-center justify-center text-white'>
+          <p className="sm:text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque totam beatae incidunt nesciunt enim debitis, expedita quasi quis rem aliquid in culpa illum fuga optio ducimus id laboriosam voluptates libero.
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque unde ratione quae veritatis. Cupiditate velit numquam, nam earum veritatis nihil rem provident laborum beatae. Fugiat officiis quia veniam veritatis velit!
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, aut reprehenderit non tempore, odit expedita numquam, hic incidunt modi inventore sequi nobis tenetur quas consequuntur quis quasi. Sunt, tempora fuga.
+          </p>
         </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:p-20">
         {articles.map((article, index) => (
           <Card
                 key={index}

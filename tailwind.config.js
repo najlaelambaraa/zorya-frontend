@@ -27,9 +27,10 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
-        'primary':"#8FBF37",
-        'secondary':"#070E1B",
-        'bg':"#070E1B",
+        'primary':"#BDCF2D",
+        'secondary':"#000000",
+        'second':"#8FBF37",
+        'bg':"#000000",
         
         grey: {
           0: "#FFFFFF",
@@ -70,14 +71,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
+          "Montserrat",
         ],
       },
       keyframes: {

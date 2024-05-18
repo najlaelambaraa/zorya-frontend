@@ -43,6 +43,12 @@ export default async function Footer() {
       className="hover:underline"
       href="/account"
     >
+      CGU
+    </LocalizedClientLink>
+    <LocalizedClientLink
+      className="hover:underline"
+      href="/account"
+    >
       POLITIQUE DE CONFIDENTIALITE
     </LocalizedClientLink>
     <LocalizedClientLink
@@ -56,7 +62,7 @@ export default async function Footer() {
   </div>
   <div className="pb-7 font-bold">
     <p className="text-center text-white text-sm">
-      © {new Date().getFullYear()} Zorya Tous droits réservés.
+      S.A.S Zorya protege {new Date().getFullYear()} 
     </p>
   </div>
 </footer>

@@ -12,16 +12,17 @@ export const metadata: Metadata = {
 export default async function Brand() {  
   return (
 <>
-      <BrandTemplate />
-         <div>
-         <BrandSection
-               title="NOTRE MARQUE"
-               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
-               "
-               buttonText="Voir nos produits"
-               imageSrc="/path/to/image.jpg"
-               altText="Image descriptive de notre marque" 
-                   />
+      
+         <div className="bg-bg">
+            <BrandSection
+                  title="NOTRE MARQUE"
+                  content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
+                  "
+                  buttonText="Voir nos produits"
+                  imageSrc=""
+                  altText="Image descriptive de notre marque" 
+                      />
+            <BrandTemplate />
          </div>
         <ValeurTemplate/>
       

@@ -14,6 +14,7 @@ import brandTemplate from "@modules/brand/templates"
 import BrandTemplate from "@modules/brand/templates"
 import Cards from "@modules/blog/templates/Cards"
 import Carousel from "@modules/home/components/carousel"
+import ValeurHomeTemplate from "@modules/layout/templates/valeurs/Valeurs-Home"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -82,7 +83,7 @@ export default async function Home({
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
-        <ValeurTemplate/>
+        <ValeurHomeTemplate/>
         <StoryComponent
           title={<TitleComponent title="NOTRE HISTOIRE" />}
           altText="Notre histoire"
@@ -90,11 +91,10 @@ export default async function Home({
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus."
           buttonText="En savoir plus"
-          buttonLink="/histoire"
+          buttonLink="/brand"
           imageSrc="/public/" 
           reverse={false} 
       />
-     
       </div>
     </>
   )
