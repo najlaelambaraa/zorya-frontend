@@ -21,15 +21,14 @@ export default async function Nav() {
       <header className="relative h-[59px] mx-auto">
         <nav className="flex items-center justify-between py-3">
           { <div className="flex items-center gap-x-6">
-            <div className="h-[29px] w-[144px]">
-              {/* <SideMenu regions={regions} /> */}
-             <img className="pl-4 ml-4" src="/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1714507426551-logo%20picto%20(1).png&w=3840&q=50" alt="Logo" />
-          
+            <div className="h-[29px] w-[144px] pl-4">
+              
+            <Logo/>
             </div>    
           </div> 
           }
          
-         <div className="flex items-center gap-x-6 text-white">
+    <div className="hidden md:flex items-center gap-x-6 text-white">
       <LocalizedClientLink
         href="/"
         className=""
@@ -50,29 +49,17 @@ export default async function Nav() {
       </LocalizedClientLink>
     </div>
 
-          <div className="flex items-center gap-x-6 h-full">
-            <div className="hidden small:flex items-center gap-x-6 h-full">
-              {process.env.FEATURE_SEARCH_ENABLED && (
-                <LocalizedClientLink
-                  className="hover:underline hidden sm:block text-white"
-                  href="/search"
-                  scroll={false}
-                >
-                  Search
-                </LocalizedClientLink>
-              )}
-              <LocalizedClientLink
-                className="hover:underline hidden sm:block text-white"
+          <div className="flex items-center gap-x-4 h-full">
+          <LocalizedClientLink
+                className="hover:underline text-white"
                 href="/account"
               >
-                
-                
+      
                <div className="w-[20px] h-[20px]">
                 {/* <Bonhomme /> */}
                 <User/>
                 </div> 
               </LocalizedClientLink>
-            </div>
             <Suspense
               fallback={
                 <LocalizedClientLink
@@ -86,6 +73,7 @@ export default async function Nav() {
             >
               <CartButton />
             </Suspense>
+            <SideMenu regions={regions} />
           </div>
         </nav>
       </header>

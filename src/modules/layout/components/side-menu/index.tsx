@@ -5,17 +5,17 @@ import { ArrowRightMini, XMark } from "@medusajs/icons"
 import { Region } from "@medusajs/medusa"
 import { Text, clx, useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
-
+import { BarsThree } from "@medusajs/icons"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CountrySelect from "../country-select"
 
 const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Search: "/search",
+  Produits: "/",
+  Marque: "/brand",
+  Blog: "/blog",
   Account: "/account",
-  Cart: "/cart",
-  Histoire: "/histoire",
+  Panier: "/cart",
+  
 }
 
 const SideMenu = ({ regions }: { regions: Region[] | null }) => {
@@ -28,8 +28,8 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
           {({ open, close }) => (
             <>
               <div className="relative flex h-full">
-                <Popover.Button className="text-white relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-                  Menu
+                <Popover.Button className="md:hidden flex text-white relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none pr-4">
+                <BarsThree/>
                 </Popover.Button>
               </div>
 
@@ -66,28 +66,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                       })}
                     </ul>
                     <div className="flex flex-col gap-y-6">
-                      <div
-                        className="flex justify-between"
-                        onMouseEnter={toggleState.open}
-                        onMouseLeave={toggleState.close}
-                      >
-                        {regions && (
-                          <CountrySelect
-                            toggleState={toggleState}
-                            regions={regions}
-                          />
-                        )}
-                        <ArrowRightMini
-                          className={clx(
-                            "transition-transform duration-150",
-                            toggleState.state ? "-rotate-90" : ""
-                          )}
-                        />
-                      </div>
-                      <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
-                      </Text>
+                      <p> S.A.S Zorya protégé </p>
                     </div>
                   </div>
                 </Popover.Panel>

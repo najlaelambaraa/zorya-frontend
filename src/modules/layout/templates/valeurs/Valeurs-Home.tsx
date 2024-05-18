@@ -22,7 +22,7 @@ const ValeurHomeTemplate = () => {
 
   return (
     <div className="flex flex-col justify-center items-center bg-primary min-h-screen">
-    <div className="flex items-center justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black py-8">
+    <div className="flex items-center justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black py-8">
       <span className="px-2 sm:px-6 md:px-6 lg:px-6">Nos valeurs</span>
     </div>
     <div className="grid sm:grid-cols-3 gap-4 justify-center items-center w-full sm:w-[936px] max-w-full px-4 sm:px-0 pb-20 text-black mt-8 sm:mt-0">

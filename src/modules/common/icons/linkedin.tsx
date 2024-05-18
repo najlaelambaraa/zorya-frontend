@@ -8,6 +8,8 @@ const Linkedin: React.FC<IconProps> = ({ fill = "#050507", className, ...attribu
       data-name="Calque 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 136.19 136.19"
+      width="50px"
+      height="40px"
       fill={fill}
       className={className}
       {...attributes}

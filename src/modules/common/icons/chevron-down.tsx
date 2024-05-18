@@ -4,7 +4,7 @@ import { IconProps } from "types/icon"
 
 const ChevronDown: React.FC<IconProps> = ({
   size = "16",
-  color = "currentColor",
+  color = "#BDCF2D",
   ...attributes
 }) => {
   return (
@@ -14,6 +14,7 @@ const ChevronDown: React.FC<IconProps> = ({
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      
       {...attributes}
     >
       <path
@@ -24,6 +25,7 @@ const ChevronDown: React.FC<IconProps> = ({
         strokeLinejoin="round"
       />
     </svg>
+    
   )
 }
 

@@ -2,6 +2,7 @@
 import { Heading } from '@medusajs/ui';
 import { useState } from 'react';
 import { ChevronDown } from "@medusajs/icons"
+import ChevronDoubleDown from '@modules/common/icons/chevronDoubleDown';
 
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -66,8 +67,7 @@ export default function Carousel() {
         className="absolute mt-8 md:mt-16 bottom-5 w-10 h-10 md:w-[65px] md:h-[43px] left-1/2 transform -translate-x-1/2 bg-primary text-black text-sm rounded-full shadow-lg transition duration-300 ease-in-out z-20"
       >
         <a href='#nosProduits' className='flex items-center justify-center w-full h-full'>
-          <ChevronDown />
-          <ChevronDown />
+          <ChevronDoubleDown/>
         </a>
       </button>
     </div>
