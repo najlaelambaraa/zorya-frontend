@@ -25,7 +25,7 @@ export default function ProductRail({
   //const displayedProducts = products.slice(0, 3);
 
   return (
-    <div className="content-container py-5 bg-bg">
+    <div className="content-container pb-36 bg-bg">
      
       <ul className="grid grid-cols-1 small:grid-cols-1">
         {products.map((product, index) => (

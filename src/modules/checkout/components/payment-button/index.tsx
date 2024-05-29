@@ -127,7 +127,7 @@ const StripePaymentButton = ({
         size="large"
         isLoading={submitting}
       >
-        Place order
+        Passer commande
       </Button>
       <ErrorMessage error={errorMessage} />
     </>
@@ -218,7 +218,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         onClick={handlePayment}
         size="large"
       >
-        Place order
+        Passer commande
       </Button>
       <ErrorMessage error={errorMessage} />
     </>

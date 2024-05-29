@@ -1,6 +1,7 @@
 import { Heading, Text } from "@medusajs/ui"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 
 const EmptyCartMessage = () => {
@@ -10,13 +11,13 @@ const EmptyCartMessage = () => {
       <p className="text-lg text-gray-600 max-w-md text-center mb-6">
         Il n'y a aucun article dans votre panier. Utilisez le lien ci-dessous pour commencer à parcourir nos produits.
       </p>
-      <InteractiveLink
-        href="/store"
+      <LocalizedClientLink
+        href="/"
       >
-        <div className="text-white bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-br font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+        <div className="button">
           Voir les produits Zorya
         </div>
-      </InteractiveLink>
+      </LocalizedClientLink>
     </div>
   )
 }

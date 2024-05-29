@@ -111,14 +111,14 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full"
+                className="w-full bg-primary text-black"
                 isLoading={isAdding}
               >
                 {!variant
-                  ? "Select variant"
+                  ? "Selectionner une variante"
                   : !inStock
-                  ? "Out of stock"
-                  : "Add to cart"}
+                  ? "En rupture de stock"
+                  : "Ajouter au panier"}
               </Button>
             </div>
           </div>

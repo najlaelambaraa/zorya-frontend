@@ -13,7 +13,7 @@ const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ profiles }) => {
   return (
     <div className="content-container py-12 sm:py-24 bg-primary">
       <div className="flex items-center justify-center text-4xl font-bold text-white py-8">
-    <span className="px-2 md:items-center text-black">NOTRE EQUIPE</span>
+    <span className="px-2 md:items-center text-black">LA TEAM</span>
     </div>
     <div className="flex flex-col sm:flex-row justify-evenly items-center w-full">
       {profiles.map((profile, index) => (
@@ -21,7 +21,7 @@ const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ profiles }) => {
           <img
             src={profile.imageUrl}
             alt={profile.fullName}
-            className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] mx-auto bg-gray-300 text-black"
+            className="w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] mx-auto bg-gray-300 text-black object-cover"
           />
           <h3 className="text-lg mt-2 text-white">{profile.fullName}</h3>
           <p className="text-sm">{profile.profession}</p>

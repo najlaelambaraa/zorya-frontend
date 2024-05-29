@@ -14,9 +14,9 @@ import InclusiviteHome from '@modules/common/icons/inclusivite-home';
 
 const ValeurHomeTemplate = () => {
   const valeurs = [
-    { Icone: SecuriteHome, titre: 'SÉCURITÉ', texte: 'Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus. ' },
-    { Icone: MOBILITEHOME, titre: 'MOBILITE', texte: 'Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.' },
-    { Icone: InclusiviteHome, titre: 'INCLUSIVITE', texte: 'Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.' },
+    { Icone: SecuriteHome, titre: 'SÉCURITÉ', texte: 'La sécurité par la visibilité ! Des tenues phosphorescentes pour des runs nocturnes sans danger ' },
+    { Icone: MOBILITEHOME, titre: 'MOBILITÉ', texte: 'Le confort avant tout  ! Des tenues de sport conçues pour une liberté de mouvement' },
+    { Icone: InclusiviteHome, titre: 'INCLUSIVITÉ', texte: 'L’esprit sportif et solidaire ! Des tenues sportives, offrant confort et modernité à toutes et tous, sans exception.' },
   
   ];
 

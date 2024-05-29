@@ -14,6 +14,7 @@ import OptionSelect from "@modules/products/components/option-select"
 
 import MobileActions from "../mobile-actions"
 import ProductPrice from "../product-price"
+import GuideTaille from "@modules/common/icons/guide-taille"
 
 type ProductActionsProps = {
   product: PricedProduct
@@ -35,8 +36,11 @@ export default function ProductActions({
   const [isAdding, setIsAdding] = useState(false)
 
   const countryCode = useParams().countryCode as string
-
+  const productTitle = product.title
+  const productDescription = product.description
+  const productMaterial = product.material
   const variants = product.variants
+  const variantEntretien = product.variants.map((variant) => variant.options?.find((option) => option.variant_id === '0')?.value)
 
   // initialize the option state
   useEffect(() => {
@@ -123,6 +127,9 @@ export default function ProductActions({
   return (
     <>
       <div className="flex flex-col gap-y-2" ref={actionsRef}>
+        <p className="font-bold">{productTitle}</p>
+        <ProductPrice product={product} variant={variant} region={region} />
+        {/* <p>{origina}</p> */}
         <div>
           {product.variants.length > 1 && (
             <div className="flex flex-col gap-y-4">
@@ -138,25 +145,27 @@ export default function ProductActions({
                   </div>
                 )
               })}
-              <Divider />
             </div>
           )}
         </div>
-
-        <ProductPrice product={product} variant={variant} region={region} />
+        <div className="flex">
+          <GuideTaille/>
+          <p className="underline decoration-1"> Guide des taille</p>
+        </div>
+       
 
         <Button
           onClick={handleAddToCart}
           disabled={!inStock || !variant}
           variant="primary"
-          className="w-full h-10"
+          className="w-[175px] h-10 bg-primary text-black rounded-2xl mt-10"
           isLoading={isAdding}
         >
           {!variant
-            ? "Select variant"
+            ? "Selectionner une variante"
             : !inStock
-            ? "Out of stock"
-            : "Add to cart"}
+            ? "En repture de stock"
+            : "Ajouter au panier"}
         </Button>
         <MobileActions
           product={product}
@@ -169,6 +178,12 @@ export default function ProductActions({
           isAdding={isAdding}
           show={!inView}
         />
+       
+        <ul>
+          {variantEntretien.map((entretien, index) => (
+            <li key={index}>{entretien}</li>
+          ))}
+        </ul>
       </div>
     </>
   )

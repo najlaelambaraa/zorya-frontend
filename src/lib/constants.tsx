@@ -11,7 +11,7 @@ export const paymentInfoMap: Record<
   { title: string; icon: React.JSX.Element }
 > = {
   stripe: {
-    title: "Credit card",
+    title: "Carte bancaire",
     icon: <CreditCard />,
   },
   "stripe-ideal": {
@@ -27,7 +27,7 @@ export const paymentInfoMap: Record<
     icon: <PayPal />,
   },
   manual: {
-    title: "Test payment",
+    title: "Paiement a la livraison",
     icon: <CreditCard />,
   },
   // Add more payment providers here

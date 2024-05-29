@@ -1,4 +1,5 @@
 "use client";
+import Instagram from '@modules/common/icons/Instagram';
 import Facebook from '@modules/common/icons/facebook';
 import GlowSphere from '@modules/common/icons/glowsphere';
 import Linkedin from '@modules/common/icons/linkedin';
@@ -36,7 +37,7 @@ export default function NewsletterForm() {
       }
     } catch (e) {
       console.error(e);
-      // alert(e.message);
+      alert(e.message);
     }
   };
 
@@ -75,6 +76,7 @@ export default function NewsletterForm() {
         </div>
       </div>
       <div className="flex justify-center mt-4 space-x-4">
+        <a href="#"><Instagram /></a>
         <a href="#"><Linkedin /></a>
         <a href="#"><Tiktok /></a>
         <a href="#"><Twitter /></a>

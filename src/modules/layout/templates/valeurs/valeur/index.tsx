@@ -11,10 +11,16 @@ type ValeurProps = {
 
 const Valeur: React.FC<ValeurProps> = ({ Icone, titre, texte }) => {
   return (
-    <div className="flex flex-col justify-evenly items-center px-4 py-2 sm:px-4 sm:py-4 m-2 text-center w-[247px] h-[235px]">
-    <Icone fill="#8FBF37" width="32" height="32" className="sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80" />
-    <h3 className="mt-2 mb-4 text-base sm:text-2xl font-bold">{titre}</h3>
-    <p className="text-sm sm:text-base">{texte}</p>
+    <div className="flex flex-col justify-evenly items-center px-4 py-2 sm:px-4 sm:py-4 m-2 text-center">
+      <div className='h-[130px]'>
+      <Icone fill="#8FBF37" className="sm:w-full sm:h-full md:w-64 md:h-full lg:w-full lg:h-full" />
+      </div>
+      <div className='h-[30px] w-[247px]'>
+      <h3 className="text-base sm:text-2xl font-bold">{titre}</h3>
+      </div>
+      <div className='h-[30px] pt-2 w-[247px]'>
+      <p className="text-sm sm:text-base">{texte}</p>
+      </div>    
   </div>
   );
 };

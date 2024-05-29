@@ -1,0 +1,18 @@
+import React from "react"
+
+import { IconProps } from "types/icon"
+
+const Exit: React.FC<IconProps> = ({
+  
+  ...attributes
+}) => {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L22 22M22 2C14.1895 9.81049 9.81049 14.1895 2 22" stroke="#8FBF37" stroke-width="3"/>
+</svg>
+
+    
+  )
+}
+
+export default Exit

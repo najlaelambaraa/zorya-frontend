@@ -15,11 +15,15 @@ import BrandTemplate from "@modules/brand/templates"
 import Cards from "@modules/blog/templates/Cards"
 import Carousel from "@modules/home/components/carousel"
 import ValeurHomeTemplate from "@modules/layout/templates/valeurs/Valeurs-Home"
+import { useState } from "react"
+import dynamic from "next/dynamic"
+import Popup from "@modules/home/components/popup"
+import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Découvrez notre collection de tenues de sport phosphorescentes pour le running nocturne",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Découvrez les tenues de sport phosphorescentes Zorya pour vos running nocturnes. Restez visible et en sécurité avec notre gamme innovante de vestes, hauts de sport et sweats",
 }
 
 const getCollectionsWithProducts = async (
@@ -75,25 +79,41 @@ export default async function Home({
     return null
   }
 
+  const Popup = dynamic(() => import("@modules/home/components/popup/popupCLient"), {
+    ssr: false,
+  });
   return (
     <>
+    
+      <Head>
+        <title>Découvrez notre collection de tenues de sport phosphorescentes pour le running nocturne</title>
+        <meta name="description" content="Découvrez les tenues de sport phosphorescentes Zorya pour vos running nocturnes. Restez visible et en sécurité avec notre gamme innovante de vestes, hauts de sport et sweats." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+    
       {/* <Hero /> */}
       <Carousel/>
       <div className="py-12 bg-secondary">
+      {/* <Popup /> */}
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
         <ValeurHomeTemplate/>
         <StoryComponent
           title={<TitleComponent title="NOTRE HISTOIRE" />}
-          altText="Notre histoire"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in hendrerit lorem. Pellentesque et ante sapien. fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus."
+          altText="histoire zorya site de vetement de sport magasin de vetement de sport magasin  vetement de sport"
+          content={ <div dangerouslySetInnerHTML={{ __html: `Welcome to the Glowsphère !<br/><br/>
+
+          Zorya, c’est l’idée de trois potes voulant révolutionner le running nocturne ! <br/><br/>
+          
+          Avec son  nom inspiré de la mythologie slave, notre marque propose une gamme innovante de vêtements de sport nocturnes, intégrant de la bioluminescence pour une haute visibilité. <br/><br/>
+          
+        Envie d'en savoir plus sur cette histoire palpitante ?`}} />}
           buttonText="En savoir plus"
           buttonLink="/brand"
-          imageSrc="/public/" 
+          imageSrc="/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1716661773176-coureur%20de%20nuit%202.jpg&w=3840&q=50" 
           reverse={false} 
+          
       />
       </div>
     </>

@@ -25,7 +25,7 @@ export default function CheckoutLayout({
           </LocalizedClientLink>
           <LocalizedClientLink
             href="/"
-            className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+            className="txt-compact-xlarge-plus text-black hover:text-primary uppercase"
           >
            Magasin Zorya 
           </LocalizedClientLink>
@@ -34,7 +34,7 @@ export default function CheckoutLayout({
       </div>
       <div className="relative">{children}</div>
       <div className="py-4 w-full flex items-center justify-center">
-        <MedusaCTA />
+        {/* <MedusaCTA /> */}
       </div>
     </div>
   )

@@ -76,7 +76,7 @@ const Shipping: React.FC<ShippingProps> = ({
             }
           )}
         >
-          Delivery
+          Livraison
           {!isOpen && cart.shipping_methods.length > 0 && <CheckCircleSolid />}
         </Heading>
         {!isOpen &&
@@ -88,7 +88,7 @@ const Shipping: React.FC<ShippingProps> = ({
                 onClick={handleEdit}
                 className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               >
-                Edit
+                Modifier
               </button>
             </Text>
           )}

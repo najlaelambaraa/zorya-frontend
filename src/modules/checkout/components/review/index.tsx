@@ -32,7 +32,7 @@ const Review = ({
             }
           )}
         >
-          Review
+          Révision
         </Heading>
       </div>
       {isOpen && previousStepsCompleted && (
@@ -40,10 +40,7 @@ const Review = ({
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                By clicking the Place Order button, you confirm that you have
-                read, understand and accept our Terms of Use, Terms of Sale and
-                Returns Policy and acknowledge that you have read Medusa
-                Store&apos;s Privacy Policy.
+              En cliquant sur le bouton "Passer commande", vous confirmez que vous avez lu, compris et accepté nos conditions d'utilisation, nos conditions de vente et notre politique de retour, et vous reconnaissez avoir lu la politique de confidentialité de Zorya.
               </Text>
             </div>
           </div>

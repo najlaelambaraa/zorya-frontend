@@ -177,7 +177,7 @@ const CartDropdown = ({
                   </div>
                   <span>Votre panier est vide</span>
                   <div>
-                    <LocalizedClientLink href="store">
+                    <LocalizedClientLink href="/">
                       <>
                         <span className="sr-only">Voir la page de nos produits</span>
                         <Button onClick={close}>Découvrir nos produits</Button>

@@ -11,9 +11,9 @@ import TitleComponent from '@modules/home/components/titleComponent';
 
 const ValeurTemplate = () => {
   const valeurs = [
-    { Icone: Securite, titre: 'SÉCURITÉ', texte: 'Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus. ' },
-    { Icone: MOBILITE, titre: 'MOBILITE', texte: 'Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.' },
-    { Icone: Inclusivite, titre: 'INCLUSIVITE', texte: 'Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultricies mauris. Maecenas vitae mattis tellus.' },
+    { Icone: Securite, titre: 'SÉCURITÉ', texte: 'La sécurité par la visibilité ! Des tenues phosphorescentes pour des runs nocturnes sans danger ' },
+    { Icone: MOBILITE, titre: 'MOBILITÉ', texte: 'Le confort avant tout ! Des tenues de sport conçues pour une liberté de mouvement ' },
+    { Icone: Inclusivite, titre: 'INCLUSIVITÉ', texte: 'L’esprit sportif et solidaire ! Des tenues sportives, offrant confort et modernité à toutes et tous, sans exception.' },
   
   ];
 

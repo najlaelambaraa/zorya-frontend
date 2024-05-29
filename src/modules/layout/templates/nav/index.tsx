@@ -11,7 +11,7 @@ import Bonhomme from "@modules/common/icons/bonhomme"
 import { User } from "@medusajs/icons"
 import { useRouter } from "next/router"
 
-
+// Appel asynchrone pour récupérer les régions
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
   
@@ -27,7 +27,7 @@ export default async function Nav() {
             </div>    
           </div> 
           }
-         
+            {/* Liens de navigation centraux pour les écrans moyens et plus grands */}
     <div className="hidden md:flex items-center gap-x-6 text-white">
       <LocalizedClientLink
         href="/"
@@ -49,6 +49,7 @@ export default async function Nav() {
       </LocalizedClientLink>
     </div>
 
+          {/* Icônes et boutons à droite */}
           <div className="flex items-center gap-x-4 h-full">
           <LocalizedClientLink
                 className="hover:underline text-white"

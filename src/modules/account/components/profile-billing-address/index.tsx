@@ -82,7 +82,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
   return (
     <form action={formAction} onReset={() => clearState()} className="w-full">
       <AccountInfo
-        label="Billing address"
+        label="Adresse de facturation"
         currentInfo={currentInfo}
         isSuccess={successState}
         isError={!!state.error}
@@ -91,13 +91,13 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
         <div className="grid grid-cols-1 gap-y-2">
           <div className="grid grid-cols-2 gap-x-2">
             <Input
-              label="First name"
+              label="Prenom"
               name="billing_address.first_name"
               defaultValue={customer.billing_address?.first_name || undefined}
               required
             />
             <Input
-              label="Last name"
+              label="Nom"
               name="billing_address.last_name"
               defaultValue={customer.billing_address?.last_name || undefined}
               required

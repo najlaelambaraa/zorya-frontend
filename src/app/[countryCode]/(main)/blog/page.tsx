@@ -6,8 +6,8 @@ import ValeurTemplate from "@modules/layout/templates/valeurs";
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Notre blog.",
+  title: "Blog Zorya : Conseils et Astuces pour vos running nocturnes",
+  description: "Explorez le blog Zorya pour des conseils pratiques, des astuces et des articles sur le running nocturne et les tenues de sport phosphorescentes.",
 }
 
 export default async function Blog() {  

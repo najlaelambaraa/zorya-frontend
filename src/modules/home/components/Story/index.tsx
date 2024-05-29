@@ -15,7 +15,7 @@ export default function StoryComponent({
 }: {
   title: JSX.Element;
   altText: string;
-  content: string;
+  content: React.ReactNode;
   buttonText: string;
   buttonLink: string;
   imageSrc: string;
@@ -25,7 +25,7 @@ export default function StoryComponent({
     <LocalizedClientLink href={buttonLink} className="group">
     <div className={`flex flex-col ${reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'} items-center justify-center bg-secondary text-white pt-10`}>
       <CustomImage src={imageSrc} alt={altText} className="w-full sm:w-auto" />
-      <div className="flex flex-col py-4 px-4 w-full sm:w-[706px] h-auto sm:h-[520px] justify-between"> 
+      <div className="flex flex-col pb-4 w-full sm:w-[706px] h-auto sm:h-[520px] justify-between pl-20"> 
         <div>
           <span className="px-4">{title}</span>
           <p>{content}</p>

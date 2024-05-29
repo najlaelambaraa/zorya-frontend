@@ -46,6 +46,15 @@ export async function generateStaticParams() {
 
   return staticParams
 }
+function formatMetadata(metadata: Record<string, unknown> | null | undefined): string {
+  if (!metadata) {
+    return '';
+  }
+  return Object.entries(metadata)
+    .map(([key, value]) => `${key}| ${value}`)
+    .join(', ');
+}
+
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { handle } = params
@@ -57,9 +66,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) {
     notFound()
   }
-
+  const metadataString = formatMetadata(product.metadata);
   return {
-    title: `${product.title} | Zorya Store`,
+    title: `${metadataString} `,
     description: `${product.title}`,
     openGraph: {
       title: `${product.title} | Zorya Store`,

@@ -45,7 +45,7 @@ import Image from "next/image";
 import { Image as MedusaImage } from "@medusajs/medusa"
 type ImageGalleryProps = {
   images: MedusaImage[];
-  onImageClick: (url: string) => void;  // Ajouter cette prop pour le clic
+  onImageClick: (url: string) => void;  
 }
 
 const ImageGallery = ({ images, onImageClick }: ImageGalleryProps) => {
@@ -55,7 +55,7 @@ const ImageGallery = ({ images, onImageClick }: ImageGalleryProps) => {
         {images.map((image, index) => (
           <Container 
             key={image.id}
-            className="relative aspect-[29/34] overflow-hidden bg-ui-bg-subtle"
+            className="relative h-[100px] w-[100px] overflow-hidden bg-ui-bg-subtle"
             id={image.id}
             onClick={() => onImageClick(image.url)}  
           >

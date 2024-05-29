@@ -10,7 +10,7 @@ const CustomImage: React.FC<CustomImageProps> = ({ src, alt }) => {
       <img
         src={src}
         alt={alt}
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-full text-black"
       />
     </div>
   );

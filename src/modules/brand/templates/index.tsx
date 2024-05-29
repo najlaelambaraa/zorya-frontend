@@ -3,17 +3,17 @@ import ProfileDisplay , { PersonInfo }from "@modules/brand/components/profileDis
 const BrandTemplate: React.FC = () => {
     const people: PersonInfo[] = [
       {
-        imageUrl: "/path/to/image1.jpg",
+        imageUrl: "/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1716659972990-hugo.png&w=3840&q=50",
         fullName: "HUGO MONNIER",
         profession: "Chill du groupe"
       },
       {
-        imageUrl: "/path/to/image2.jpg",
+        imageUrl: "/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1716660111176-gregoire.png&w=3840&q=50",
         fullName: "GREGOIRE DELARUE",
-        profession: "L'overthinker"
+        profession: "L'overthinking"
       },
       {
-        imageUrl: "/path/to/image3.jpg",
+        imageUrl: "/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1716660031710-nino.png&w=3840&q=50",
         fullName: "NINO PARMENT",
         profession: "Le rationnel"
       }
