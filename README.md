@@ -218,6 +218,39 @@ The app folder contains all Next.js App Router pages and layouts, and takes care
         │   └── [query]
         ├── search
         └── store
+
+
+
+
+
+└── [countryCode]
+    ├── (checkout)
+    │   └── checkout
+    └── (main)
+        ├── account
+        │   ├── addresses
+        │   └── orders
+        │       └── details
+        │           └── [id]
+        ├── cart
+        ├── 
+        │   
+        ├── collections
+        │   └── [handle]
+        ├── order
+        │   └── confirmed
+        │       └── [id]
+        ├── products
+        │   └── [handle]
+        │ 
+        ├── blog
+        ├── marque
+        ├── cgu
+        ├── condition-de-vente
+        ├── mentions-legales
+        ├── politique-de-confidentialite
+        └── store
+
 ```
 
 The app router folder structure represents the routes of the Starter. In this case, the structure is as follows:
